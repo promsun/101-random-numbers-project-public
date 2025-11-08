@@ -2,7 +2,7 @@
 
 This is a simple web application that provides APIs to generate random numbers, simulate coin flips, and roll dice. The project is built using Node.js and Express.js, and it includes Swagger documentation for easy API exploration.
 
-[🖥️ Live Demo (Vercel)](https://random-numbers-101.vercel.app/)
+[🖥️ Live Demo (Vercel)](https://random-numbers-101.vercel.app/api-docs)
 
 ## Technologies Used ✨
 
