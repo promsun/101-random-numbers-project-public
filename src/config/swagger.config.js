@@ -17,6 +17,12 @@ const options = {
         description: isProduction ? "Production server" : "Development server",
       },
     ],
+    tags: [
+      {
+        name: "Random Operations",
+        description: "Endpoints for generating random values",
+      },
+    ],
   },
   apis: ["./src/routes/*.js"],
 };
