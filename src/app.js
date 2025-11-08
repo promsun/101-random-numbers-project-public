@@ -34,6 +34,7 @@ app.get("/", (req, res) => {
 });
 
 // Swagger Documentation
+// Add custom CSS due to production build issues with Swagger UI: https://stackoverflow.com/questions/77149997/when-deployed-on-vercel-my-swagger-ui-shows-a-blank-page-nodejs-nestjs-swagger
 app.use(
   "/api-docs",
   swaggerUi.serve,
