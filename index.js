@@ -3,7 +3,7 @@ const app = require("./src/app");
 const config = require("./src/config/app.config");
 
 app.listen(config.port, () => {
-  console.log(`✅ Server is running on port ${config.port}`);
+  console.log(`✅ Server is running at: ${config.serverUrl}`);
   console.log(`✅ Environment: ${config.nodeEnv}`);
-  console.log(`✅ API Documentation: http://localhost:${config.port}/api-docs`);
+  console.log(`✅ API Documentation: ${config.serverUrl}/api-docs`);
 });

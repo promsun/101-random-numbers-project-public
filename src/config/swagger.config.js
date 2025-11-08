@@ -1,6 +1,8 @@
 const swaggerJsdoc = require("swagger-jsdoc");
 const config = require("./app.config");
 
+const isProduction = config.nodeEnv === "production";
+
 const options = {
   definition: {
     openapi: "3.0.0",
@@ -11,8 +13,8 @@ const options = {
     },
     servers: [
       {
-        url: `http://localhost:${config.port}`,
-        description: "Development server",
+        url: config.serverUrl,
+        description: isProduction ? "Production server" : "Development server",
       },
     ],
   },
