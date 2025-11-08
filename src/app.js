@@ -6,6 +6,10 @@ const swaggerSpec = require("./config/swagger.config");
 const randomRoutes = require("./routes/random.routes");
 const config = require("./config/app.config");
 
+// CDN CSS for Swagger UI
+const CSS_URL =
+  "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger-ui.min.css";
+
 const app = express();
 
 // Middleware
@@ -30,7 +34,11 @@ app.get("/", (req, res) => {
 });
 
 // Swagger Documentation
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+app.use(
+  "/api-docs",
+  swaggerUi.serve,
+  swaggerUi.setup(swaggerSpec, { customCssUrl: CSS_URL })
+);
 
 // API Routes
 app.use("/api", randomRoutes);
