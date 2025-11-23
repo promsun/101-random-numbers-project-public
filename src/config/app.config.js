@@ -1,8 +1,9 @@
+const port = process.env.PORT || 3000;
+
 const config = {
-  port: process.env.PORT || 3000,
+  port: port,
   nodeEnv: process.env.NODE_ENV || "development",
-  serverUrl:
-    process.env.SERVER_URL || `http://localhost:${process.env.PORT || 3000}`,
+  serverUrl: process.env.SERVER_URL || `http://localhost:${port}`,
   corsOrigin: process.env.CORS_ORIGIN || "*",
 
   app: {

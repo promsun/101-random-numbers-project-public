@@ -28,6 +28,7 @@ app.get("/", (req, res) => {
       description: config.app.description,
       status: "running",
       timestamp: new Date().toISOString(),
+      environment: config.nodeEnv,
       documentation: "/api-docs",
     },
   });
